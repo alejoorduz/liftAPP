@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-center>Registrate</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Nombre completo</ion-label>
+    <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Edificio</ion-label>
+    <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select One"
+    [(ngModel)]="proyecto">
+      <ion-select-option value="f">DelPino</ion-select-option>
+      <ion-select-option value="m">Commeva</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Usuario</ion-label>
+    <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input [(ngModel)]="password" type="password" name="password"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Confirmar Contraseña</ion-label>
+    <ion-input [(ngModel)]="password2" type="password" name="password2"></ion-input>
+  </ion-item>
+  
+  <div>
+    <ion-button  color="secondary" shape="round" (click)="OnSubmitRegister()" >Registrarse</ion-button>
+  </div>
+
+  <div>
+    <ion-button  shape="round" (click)="OnSubmitLogin()"> Sign In</ion-button>
+  </div>
+
+  <p text-center routerLink="/login">Ya tengo cuenta</p>
+
+</ion-content>
